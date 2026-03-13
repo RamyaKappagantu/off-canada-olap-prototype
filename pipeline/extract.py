@@ -11,7 +11,7 @@ def extract_phase():
             print(f"Loading {CANADA_PARQUET} into raw_layer.off_products!!")
             # countries_tags has not been included since all of them are from "en:canada"
             conn.execute(f"""CREATE OR REPLACE TABLE raw_layer.off_products AS
-                    SELECT brands, data_quality_errors_tags, food_groups_tags,
+                    SELECT brands, code, data_quality_errors_tags, food_groups_tags,
                     ingredients_original_tags, nutriments, nutriscore_score, product_name 
                     FROM read_parquet('{CANADA_PARQUET}')""")
 
