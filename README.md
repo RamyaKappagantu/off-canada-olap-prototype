@@ -17,6 +17,13 @@ This prototype specifically investigates whether Brand + ProductName can serve a
 
 The results from this analysis help assess whether such a design is viable for the Canadian OLAP database.
 # Key Files
-
+- extract.py - This is a python file which contains the logic to ingest the input sources i.e OFF Canada Parquet and Recipies dataset from Canada Food Guide
+- transform.py - This is a python file which creates tables in the staging layer and analytical layer. These transformations normalize product data and construct logical product entities.
+- analysis.py - This is a python file which performs analytical queries and provides key metrics for initial investigation like number of barcode records, number of logical level products, number of duplicate groups, product groups with distinct nutriscore values
 # How to run
+- Install dependencies: duckdb, pandas
+- Place the datasets in data/raw folder
+- Run extract.py - The output should create tables in the raw layer
+- Run transform.py - The output should create tables in the staging and analytical layer and successfully perform transformations
+- Run analysis.py - The output should display the required metrics
 
