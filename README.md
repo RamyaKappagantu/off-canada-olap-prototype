@@ -16,22 +16,7 @@ The prototype implements a small ELT pipeline that:
 This prototype specifically investigates whether Brand + ProductName can serve as a logical product identifier, linking multiple barcodes to a single analytical product entity while still preserving the original barcode-level records.
 
 The results from this analysis help assess whether such a design is viable for the Canadian OLAP database.
-# Repository structure
-off-canada-olap-prototype/
-│
-├── data/
-│   └── raw/
-│       ├── off-canada.parquet
-│       └── recipes_data.csv
-│
-├── pipeline/
-│   ├── extract.py
-│   ├── transform.py
-│   └── analysis.py
-│
-├── .gitignore
-|    ├── off.duckdb
-│
-└── README.md
+# Key Files
+
 # How to run
 
