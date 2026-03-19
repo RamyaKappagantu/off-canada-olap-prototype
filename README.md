@@ -5,7 +5,7 @@ The prototype implements a small ELT pipeline that:
 
 - Extracts Canadian product data from the OFF Parquet dataset.
 
-- Loads the raw data into DuckDB.
+- Loads the raw data and recipes data from Canada Food Guide into DuckDB.
 
 - Transforms the barcode-level OFF records into a structured staging layer.
 
@@ -22,8 +22,15 @@ The results from this analysis help assess whether such a design is viable for t
 - analysis.py - This is a python file which performs analytical queries and provides key metrics for initial investigation like number of barcode records, number of logical level products, number of duplicate groups, product groups with distinct nutriscore values
 # How to run
 - Install dependencies: duckdb, pandas
+```python
+pip3 install duckdb pandas
 - Place the datasets in data/raw folder
 - Run extract.py - The output should create tables in the raw layer
+```python
+python3 pipeline\extract.py
 - Run transform.py - The output should create tables in the staging and analytical layer and successfully perform transformations
+```python
+python3 pipeline\transform.py
 - Run analysis.py - The output should display the required metrics
-
+```python
+python3 pipeline\analysis.py
