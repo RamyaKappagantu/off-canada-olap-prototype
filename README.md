@@ -33,6 +33,7 @@ python3 pipeline\extract.py
 - Run transform.py - The output should create tables in the staging and analytical layer and successfully perform transformations
 ```python
 python3 pipeline\transform.py
+```
 - Run analysis.py - The output should display the required metrics
 ```python
 python3 pipeline\analysis.py
